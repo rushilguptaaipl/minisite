@@ -78,40 +78,45 @@
 						<h3 class="heading mb-4">Find City</h3>
 						<form action="#">
 							<div class="fields">
+								<!-- Destination, City input -->
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Destination, City">
+									<input type="text" class="form-control" placeholder="Destination, City" id="destination" name="destination" autocomplete="off">
 								</div>
+								<!-- Select Location dropdown -->
 								<div class="form-group">
 									<div class="select-wrap one-third">
 										<div class="icon"><span class="ion-ios-arrow-down"></span></div>
-										<select name="" id="" class="form-control" placeholder="Keyword search">
+										<select name="location" id="location" class="form-control" placeholder="Keyword search" autocomplete="off">
 											<option value="">Select Location</option>
-											<option value="">San Francisco USA</option>
-											<option value="">Berlin Germany</option>
-											<option value="">Lodon United Kingdom</option>
-											<option value="">Paris Italy</option>
+											<option value="san_francisco">San Francisco, USA</option>
+											<option value="berlin">Berlin, Germany</option>
+											<option value="london">London, United Kingdom</option>
+											<option value="paris">Paris, Italy</option>
 										</select>
 									</div>
 								</div>
+								<!-- Check-in Date (From) -->
 								<div class="form-group">
-									<input type="text" id="checkin_date" class="form-control" placeholder="Date from">
+									<input type="text" id="checkin_date_from" class="form-control" placeholder="Date from" name="checkin_date_from" autocomplete="off">
 								</div>
+								<!-- Check-in Date (To) -->
 								<div class="form-group">
-									<input type="text" id="checkin_date" class="form-control" placeholder="Date to">
+									<input type="text" id="checkin_date_to" class="form-control" placeholder="Date to" name="checkin_date_to" autocomplete="off">
 								</div>
+								<!-- Price Range Slider -->
 								<div class="form-group">
 									<div class="range-slider">
 										<span>
-											<input type="number" value="25000" min="0" max="120000" /> -
-											<input type="number" value="50000" min="0" max="120000" />
+											<input type="number" value="25000" min="0" max="120000" id="price_min" name="price_min" autocomplete="off" /> -
+											<input type="number" value="50000" min="0" max="120000" id="price_max" name="price_max" autocomplete="off" />
 										</span>
-										<input value="1000" min="0" max="120000" step="500" type="range" />
-										<input value="50000" min="0" max="120000" step="500" type="range" />
-										</svg>
+										<input value="1000" min="0" max="120000" step="500" type="range" id="price_range_min" name="price_range_min" autocomplete="off" />
+										<input value="50000" min="0" max="120000" step="500" type="range" id="price_range_max" name="price_range_max" autocomplete="off" />
 									</div>
 								</div>
+								<!-- Submit Button -->
 								<div class="form-group">
-									<input type="submit" value="Search" class="btn btn-primary py-3 px-5">
+									<input type="submit" value="Search" class="btn btn-primary py-3 px-5" id="search_button" name="search_button">
 								</div>
 							</div>
 						</form>
@@ -120,48 +125,39 @@
 						<h3 class="heading mb-4">Star Rating</h3>
 						<form method="post" class="star-rating">
 							<div class="form-check">
-								<input type="checkbox" class="form-check-input" id="exampleCheck1">
-								<label class="form-check-label" for="exampleCheck1">
-									<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
-												class="icon-star"></i><i class="icon-star"></i><i
-												class="icon-star"></i></span></p>
+								<input type="checkbox" class="form-check-input" id="star_5" name="star_5">
+								<label class="form-check-label" for="star_5">
+									<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p>
 								</label>
 							</div>
 							<div class="form-check">
-								<input type="checkbox" class="form-check-input" id="exampleCheck1">
-								<label class="form-check-label" for="exampleCheck1">
-									<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
-												class="icon-star"></i><i class="icon-star"></i><i
-												class="icon-star-o"></i></span></p>
+								<input type="checkbox" class="form-check-input" id="star_4" name="star_4">
+								<label class="form-check-label" for="star_4">
+									<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i></span></p>
 								</label>
 							</div>
 							<div class="form-check">
-								<input type="checkbox" class="form-check-input" id="exampleCheck1">
-								<label class="form-check-label" for="exampleCheck1">
-									<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
-												class="icon-star"></i><i class="icon-star-o"></i><i
-												class="icon-star-o"></i></span></p>
+								<input type="checkbox" class="form-check-input" id="star_3" name="star_3">
+								<label class="form-check-label" for="star_3">
+									<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
 								</label>
 							</div>
 							<div class="form-check">
-								<input type="checkbox" class="form-check-input" id="exampleCheck1">
-								<label class="form-check-label" for="exampleCheck1">
-									<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i
-												class="icon-star-o"></i><i class="icon-star-o"></i><i
-												class="icon-star-o"></i></span></p>
+								<input type="checkbox" class="form-check-input" id="star_2" name="star_2">
+								<label class="form-check-label" for="star_2">
+									<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
 								</label>
 							</div>
 							<div class="form-check">
-								<input type="checkbox" class="form-check-input" id="exampleCheck1">
-								<label class="form-check-label" for="exampleCheck1">
-									<p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i
-												class="icon-star-o"></i><i class="icon-star-o"></i><i
-												class="icon-star-o"></i></span></p>
+								<input type="checkbox" class="form-check-input" id="star_1" name="star_1">
+								<label class="form-check-label" for="star_1">
+									<p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
 								</label>
 							</div>
 						</form>
 					</div>
 				</div>
+				
 				<div class="col-lg-9">
 					<div class="row">
 						<div class="col-md-4 ftco-animate">
